@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000/v1'
+const API_URL = 'v1';
 
 async function httpGetPlanets() {
   const response = await fetch(`${API_URL}/planets`);
@@ -31,8 +31,6 @@ async function httpSubmitLaunch(launch) {
 }
 
 async function httpAbortLaunch(id) {
-  // TODO: Once API is ready.
-  // Delete launch with given ID.
   try {
     return await fetch(`${API_URL}/launches/${id}`,{
       method: "delete",
